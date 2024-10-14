@@ -1,0 +1,24 @@
+Task:
+Design an LLM agent that successfully does the following task:
+    1. Looks up the pages for homicide statistics for the cities of New York, New Orleans, and Los Angeles.
+    2. Extracts the homicide numbers for each year for the past 5 years.
+    3. Dumps them in a structured table.
+    You may give the agent extremely specific instructions if necessary. 
+
+Send the code and a short writeup of your findings.
+
+Thinking:
+Traditional database need to write search query to finish look up tasks. Even for a database with GUI, user also
+need to enter value or select options from a drop down list as a input of a "filter" which can be treat as the 
+front-end implementation of a search query.
+
+For this task, user can interact with the LLM agent with natural language, and the LLM can extracts useflu
+information from user's prompt, then generate a search query into database, so that user can search data with
+natural laguage instead of writing code like SQL.
+
+Implementation:
+Step 1: Search useful urls that contain homicide data.
+Step 2: Use tools like Web crawler to form web data into a database. ??
+Step 3: Implement a ChatGPT agent that can generate search query based on user's prompt. 
+Step 4: Feed query into database and get the result.
+Step 5: Dump result into a structured table.
