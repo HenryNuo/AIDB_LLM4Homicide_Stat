@@ -8,17 +8,16 @@ Design an LLM agent that successfully does the following task:
 Send the code and a short writeup of your findings.
 
 Thinking:
-Traditional database need to write search query to finish look up tasks. Even for a database with GUI, user also
-need to enter value or select options from a drop down list as a input of a "filter" which can be treat as the 
-front-end implementation of a search query.
+Most large language models (LLMs) like ChatGPT have a knowledge cutoff date, which means they are not aware of any 
+events or data beyond a certain point. And most of large language models themselves don't have ability to search 
+web in real-time, but required to equip with web browsing capabilities so they can retrieve up-to-date information
+beyond it's training data, including recent news, live statistics.
 
 For this task, user can interact with the LLM agent with natural language, and the LLM can extracts useflu
-information from user's prompt, then generate a search query into database, so that user can search data with
-natural laguage instead of writing code like SQL.
+information from web in real time based on user's prompt. Then LLM cann dump the extracted data into a structured
+table.
 
 Implementation:
-Step 1: Search useful urls that contain homicide data.
-Step 2: Use tools like Web crawler to form web data into a database. ??
-Step 3: Implement a ChatGPT agent that can generate search query based on user's prompt. 
-Step 4: Feed query into database and get the result.
-Step 5: Dump result into a structured table.
+Step 1: Make LLM have the capabilities to browse website in real time.
+Step 2: Use tools like Web crawler to extract information from web.
+Step 3: Dump results into a structured table.
